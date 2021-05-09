@@ -25,10 +25,21 @@ public class TrialOfJava <T> {
 	}
 	
 	static <T> void display(T obj1,T obj2){
-		System.out.println("***************Display Method****************");
-		System.out.println("Object 1 = "+ obj1);
-		System.out.println("Object 2 = "+ obj2);
-		System.out.println("*********************************************");
+		System.out.println("*************** Display Method ****************");
+		
+		if(obj1 instanceof Integer && obj2 instanceof Integer){
+			int num1 = (int)obj1;
+			int num2 = (int)obj2;
+			System.out.println("Addition = "+ Integer.sum(num1, num2));
+		}else if(obj1 instanceof Double && obj2 instanceof Double){
+			double num1 = (double)obj1;
+			double num2 = (double)obj2;
+			System.out.println("Additon of float = "+ (num1 + num2));
+		}else{
+			System.out.println("Please make sure your ^Datatype^");
+		}
+				
+		System.out.println("***********************************************");
 	}
 	
 	
